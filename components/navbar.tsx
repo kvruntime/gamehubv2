@@ -10,7 +10,7 @@ function NavBar() {
     <div>
       <Link href={"/"}>
         {/* <Image alt="logo" src={logo} width={50} height={50} priority /> */}
-        <IoLogoGameControllerB width={100} height={100} fontSize={20} />
+        <IoLogoGameControllerB width={100} height={100} fontSize={20} className="text-4xl font-extrabold text-sky-950" />
       </Link>
     </div>
 

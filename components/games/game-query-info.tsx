@@ -14,7 +14,7 @@ export default function GameQueryInfo() {
   const queryInfo: string = `${genreName || ""} ${platformName || ""} Games`
   return (
     <>
-      <h2 className="font-bold text-2xl my-2">{queryInfo}</h2>
+      <h2 className="font-bold text-2xl my-2 text-wrap md:text-nowrap  md:text-left">{queryInfo}</h2>
     </>
   )
 }

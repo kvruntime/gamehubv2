@@ -7,16 +7,17 @@ import Image from "next/image"
 
 export default function GameCard({ game }: { game: Game }) {
   return (
-    <Card>
-      <CardHeader className="h-[200px]">
-        <div className="w-[100%] h-[180px] rounded-sm overflow-hidden">
-          <Image src={getCroppedImageUrl(game.background_image)} width={200} height={200} alt={game.name}
-          className="w-[100%] object-contain"/>
-        </div>
+    <Card className="w-[100%] p-1">
+      <CardHeader className="h-[200px] p-0 w-[100%]">
+        {/* <div className="w-[100%] h-[180px] rounded-sm overflow-hidden"> */}
+          <Image src={getCroppedImageUrl(game.background_image)} width={50} height={200} alt={game.name}
+          className="w-[100%] object-cover rounded-lg overflow-hidden h-[180px]"/>
+        {/* </div> */}
       </CardHeader>
-      <CardContent>
+
+      <CardContent className="p-1">
         <PlatformBadge platforms={game.platforms} />
-        <Link href={`/${game.id}`}><h2 className="h-2 font-semibold">{game.name}</h2></Link>
+        <Link href={`/${game.id}`} className="h-2 font-semibold text-wrap md:text-nowrap m-2"><span>{game.name}</span></Link>
       </CardContent>
     </Card>
   )
