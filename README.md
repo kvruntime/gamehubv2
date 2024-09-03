@@ -36,5 +36,22 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## Todo
+## Build images
 
+### Build & run dev images
+
+```bash
+  # build
+  docker build -f .docker/Dockerfile -t gamehubv2:local --build-arg RAWG_KEY= .
+  # run
+  docker-compose -f .docker/docker-compose.yml up -d
+```
+
+### Build & prod dev images
+
+```bash
+  # build
+  docker build -f .docker/Dockerfile -t ghcr.io/kvruntime/gamehubv2:prod .
+  # run
+  docker-compose -f .docker/docker-compose.dev.yml up -d
+```

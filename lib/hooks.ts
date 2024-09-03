@@ -60,8 +60,9 @@ export const useElementClientHook = <T>(route: string) => {
     fetchData()
   }, [])
 
-
-  return { data: item, error: error, isLoading }
+  if (item) return { data: item, error: error, isLoading }
+  else (item)
+  return { data: null, error: error, isLoading }
 }
 
 
