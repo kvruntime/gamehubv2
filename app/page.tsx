@@ -13,7 +13,7 @@ export default function Home() {
       <div className="">
         <GameQueryInfo />
         <div className="p-2"> <DiscoverFilters /> </div>
-        <GameGrid />
+        <div className="h-screen overflow-y-scroll"> <GameGrid /></div>
       </div>
     </main>
   );
