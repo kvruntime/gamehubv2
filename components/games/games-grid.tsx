@@ -29,7 +29,7 @@ export default function GameGrid() {
   //   [store.genreId, store.platformId, store.ordering])
 
   // const { data: games, error, isPending } = useGamesHookProvider({ genreId: store.genreId, platformId: store.platformId, ordering: store.ordering })
-  const { data, error, isLoading, hasNextPage, fetchNextPage } = useInfiniteGameHook({ genreId: store.genreId, platformId: store.platformId, ordering: store.ordering })
+  const { data, error, isLoading, hasNextPage, fetchNextPage } = useInfiniteGameHook({ genreId: store.genreId, platformId: store.platformId, ordering: store.ordering, searchGameText:store.searchGameText })
 
   const squeletons = [1, 2, 3, 4, 5, 6]
 
