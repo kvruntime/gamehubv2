@@ -1,9 +1,20 @@
+import Aside from "@/components/aside";
+import DiscoverFilters from "@/components/games/discover-filter";
+import GameQueryInfo from "@/components/games/game-query-info";
+import GameGrid from "@/components/games/games-grid";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  justify-between p-2">
-      <h1 className="text-3xl text-red-950">Gamehub</h1>
+    <main className="min-h-screen p-2 grid sm:grid-cols-1 md:grid-cols-[200px_1fr]">
+      <div className=" hidden md:block">
+        <Aside />
+      </div>
+      <div className="">
+        <GameQueryInfo />
+        <div className="p-2"> <DiscoverFilters /> </div>
+        <GameGrid />
+      </div>
     </main>
   );
 }

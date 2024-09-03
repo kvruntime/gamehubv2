@@ -1,0 +1,10 @@
+services:
+  gamehub-v2:
+    image: node:22-bullseye
+    command: sleep infinity
+    volumes:
+      - ../:/workspaces/gamehub-v2:cached
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ../.env

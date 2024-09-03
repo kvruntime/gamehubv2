@@ -1,0 +1,39 @@
+{
+  "name": "gamehub-v2",
+  "dockerComposeFile": [
+    "./docker-compose.yml"
+  ],
+  "service": "gamehub-v2",
+  "workspaceFolder": "/workspaces/gamehub-v2",
+  "shutdownAction": "none",
+  "postStartCommand": [
+    "npm i"
+  ],
+  "mounts": [
+    "type=bind,source=/c/Users/viktor/.ssh,target=/root/.ssh,readonly"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "ppa": true,
+      "version": "latest"
+    },
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "setLocale": true,
+      "theme": "robbyrussell",
+      "plugins": "git docker",
+      "desiredLocale": "en_US.UTF-8 UTF-8"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "ms-vscode.js-debug-nightly",
+        "idered.npm",
+        "christian-kohler.npm-intellisense",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
+}

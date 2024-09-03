@@ -1,0 +1,12 @@
+services:
+  gamehub-v2:
+    image: ghcr.io/kvruntime/gamehub-v2:prod
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ../.env
+    ports:
+      - 8888:80
