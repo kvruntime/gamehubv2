@@ -1,16 +1,16 @@
 {
-  "name": "gamehub-v2",
+  "name": "gamehubv2",
   "dockerComposeFile": [
     "./docker-compose.yml"
   ],
-  "service": "gamehub-v2",
-  "workspaceFolder": "/workspaces/gamehub-v2",
+  "service": "gamehubv2",
+  "workspaceFolder": "/workspaces/gamehubv2",
   "shutdownAction": "none",
   "postStartCommand": [
     "npm i"
   ],
   "mounts": [
-    "type=bind,source=/c/Users/viktor/.ssh,target=/root/.ssh,readonly"
+    "type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly"
   ],
   "features": {
     "ghcr.io/devcontainers/features/git:1": {

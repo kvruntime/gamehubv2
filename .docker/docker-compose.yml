@@ -1,6 +1,6 @@
 services:
-  gamehub-v2:
-    image: ghcr.io/kvruntime/gamehub-v2:prod
+  gamehubv2:
+    image: ghcr.io/kvruntime/gamehubv2:prod
     build:
       context: ..
       dockerfile: .docker/Dockerfile

@@ -1,7 +1,7 @@
 import { Input } from "./ui/input";
 
 function SearchBar() {
-  return (<div className="w-3/4">
+  return (<div className="grow mx-3">
   <Input  placeholder="Search game"/>
   </div>);
 }

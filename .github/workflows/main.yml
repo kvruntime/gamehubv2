@@ -3,7 +3,7 @@ name: CreateImage
 on: [push]
 
 env:
-  IMAGE_NAME: ghcr.io/${{github.actor}}/gamehub-v2:prod
+  IMAGE_NAME: ghcr.io/${{github.actor}}/gamehubv2:prod
 
 jobs:
   create-image:

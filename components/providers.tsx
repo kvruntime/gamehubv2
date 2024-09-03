@@ -18,7 +18,7 @@ function Providers({ children, ...props }: ThemeProviderProps) {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider
+        <ThemeProvider {...props}
           defaultTheme="dark"
           attribute="class"
           disableTransitionOnChange
