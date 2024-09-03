@@ -24,7 +24,6 @@ import GameCard from "./game-card"
 
 export default function GameGrid() {
   const store = useGamesQueryStore()
-  // const { data: games, error, isPending } = dataProvider()
   // const { data: games, error, isPending } = useGamesClientHook({ genreId: store.genreId, platformId: store.platformId, ordering: store.ordering },
   //   [store.genreId, store.platformId, store.ordering])
 
